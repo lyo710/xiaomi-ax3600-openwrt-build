@@ -74,7 +74,7 @@ jobs:
       run: |
         cat openwrt/.config
         echo '================================================================'
-        cd openwrt && make -j1 V=s
+        cd openwrt && make -j1 V=s -Werror=implicit-function-declaration
     - name: Print Disk Space After
       run: df -h
     - name: Organize files
