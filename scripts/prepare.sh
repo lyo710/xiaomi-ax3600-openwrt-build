@@ -9,6 +9,8 @@
 git clone https://github.com/zhkong/openwrt-ipq807x.git --single-branch openwrt --depth 1
 cd openwrt
 
+echo 'TARGET_CFLAGS += -Werror=implicit-function-declaration' >> include/hardening.mk
+
 # 更新 Feeds
 ./scripts/feeds update -a
 ./scripts/feeds install -a
