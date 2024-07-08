@@ -10,6 +10,7 @@ git clone https://github.com/zhkong/openwrt-ipq807x.git --single-branch openwrt 
 cd openwrt
 
 echo 'TARGET_CFLAGS += -Werror=implicit-function-declaration' >> include/hardening.mk
+echo 'TARGET_CFLAGS += -Wbuiltin-declaration-mismatch' >> include/hardening.mk
 
 # 更新 Feeds
 ./scripts/feeds update -a
